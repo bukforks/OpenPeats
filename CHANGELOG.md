@@ -8,6 +8,12 @@ The release workflow reads the section matching the tag it is building and
 publishes it as the release body, so every version needs one before it is
 tagged.
 
+## [0.2.1] - 2026-10-11
+
+### Fixed
+
+- Fallback to debug signing for release APK builds when no keystore secrets are configured, allowing release APKs to install directly on Android devices.
+
 ## [0.2.0] - 2026-09-03
 
 ### Changed
@@ -63,5 +69,6 @@ First release.
 - CI on Linux and Windows, and a release workflow producing the Linux, Windows
   and Android artefacts plus `SHA256SUMS`.
 
+[0.2.1]: https://github.com/bukforks/OpenPeats/releases/tag/v0.2.1
 [0.2.0]: https://github.com/Wasabules/OpenPeats/releases/tag/v0.2.0
 [0.1.0]: https://github.com/Wasabules/OpenPeats/releases/tag/v0.1.0

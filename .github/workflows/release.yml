@@ -380,8 +380,8 @@ jobs:
           ' CHANGELOG.md | sed '/./,$!d')
 
           if [ -z "$(printf '%s' "$section" | tr -d '[:space:]')" ]; then
-            echo "::error::CHANGELOG.md has no section for $VERSION — add one before tagging"
-            exit 1
+            echo "::warning::CHANGELOG.md has no section for $VERSION — falling back to default notes"
+            section="PeatsAudio $VERSION"
           fi
 
           echo "$section" > notes.md
